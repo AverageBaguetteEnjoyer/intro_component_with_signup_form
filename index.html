@@ -24,35 +24,35 @@
                 <div class="banner">
                     <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
                 </div>
-                <form class="form">
+                <form class="form" data-form novalidate>
                     <div class="form__inputs">
                         <div class="form__input-wrapper" data-input-wrapper>
                             <input type="text" name="firstName" id="firstName" placeholder="First name" aria-label="First name">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
                             <div class="form__input-errors" data-input-errors>
-                                <span data-input-empty>First Name cannot be empty</span>
+                                <span data-input-empty class="hidden">First Name cannot be empty</span>
                             </div>
                         </div>
                         <div class="form__input-wrapper" data-input-wrapper>
                             <input type="text" name="lastName" id="lastName" placeholder="Last name" aria-label="Last name">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
                             <div class="form__input-errors" data-input-errors>
-                                <span data-input-empty>Last Name cannot be empty</span>
+                                <span data-input-empty class="hidden">Last Name cannot be empty</span>
                             </div>
                         </div>
                         <div class="form__input-wrapper" data-input-wrapper>
                             <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" aria-label="Email address">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
                             <div class="form__input-errors" data-input-errors>
-                                <span data-input-empty>Email Address cannot be empty</span>
-                                <span data-input-invalid-email>Looks like this is not an email</span>
+                                <span data-input-empty class="hidden">Email Address cannot be empty</span>
+                                <span data-input-invalid-email class="hidden">Looks like this is not an email</span>
                             </div>
                         </div>
                         <div class="form__input-wrapper" data-input-wrapper>
                             <input type="password" name="password" id="password" placeholder="Password" aria-label="Password">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
                             <div class="form__input-errors" data-input-errors>
-                                <span data-input-empty>Password cannot be empty</span>
+                                <span data-input-empty class="hidden">Password cannot be empty</span>
                             </div>
                         </div>
                     </div>
