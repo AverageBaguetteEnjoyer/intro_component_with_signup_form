@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Intro component with signup form | solution to the Frontend Mentor challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro component with signup form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <section class="section">
+            <div class="section__left">
+                <header>
+                    <h1>Learn to code by watching others</h1>
+                    <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+                </header>
+            </div>
+            <div class="section__right">
+                <div class="banner">
+                    <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+                </div>
+                <form class="form">
+                    <div>
+                        <div class="form__input-wrapper" data-input-wrapper>
+                            <input type="text" name="firstName" id="firstName" placeholder="First name" aria-label="First name">
+                            <img class="form__error-icon" src="./images/icon-error.svg" alt="">
+                            <div class="form__input-errors" data-input-errors>
+                                <span data-input-empty>First Name cannot be empty</span>
+                            </div>
+                        </div>
+                        <div class="form__input-wrapper" data-input-wrapper>
+                            <input type="text" name="lastName" id="lastName" placeholder="Last name" aria-label="Last name">
+                            <img class="form__error-icon" src="./images/icon-error.svg" alt="">
+                            <div class="form__input-errors" data-input-errors>
+                                <span data-input-empty>Last Name cannot be empty</span>
+                            </div>
+                        </div>
+                        <div class="form__input-wrapper" data-input-wrapper>
+                            <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" aria-label="Email address">
+                            <img class="form__error-icon" src="./images/icon-error.svg" alt="">
+                            <div class="form__input-errors" data-input-errors>
+                                <span data-input-empty>Email Address cannot be empty</span>
+                                <span data-input-invalid-email>Looks like this is not an email</span>
+                            </div>
+                        </div>
+                        <div class="form__input-wrapper" data-input-wrapper>
+                            <input type="password" name="password" id="password" placeholder="Password" aria-label="Password">
+                            <img class="form__error-icon" src="./images/icon-error.svg" alt="">
+                            <div class="form__input-errors" data-input-errors>
+                                <span data-input-empty>Password cannot be empty</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="form__submit-btn">Claim your free trial</button>
+                        <small class="form__tos">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
