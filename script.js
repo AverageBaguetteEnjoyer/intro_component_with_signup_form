@@ -30,6 +30,8 @@ const validateForm = () => {
         } else {
             inputWrapper.classList.remove("error");
         }
+
+        input.setAttribute("aria-invalid", hasErrors);
     });
 }
 

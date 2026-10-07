@@ -27,31 +27,31 @@
                 <form class="form" data-form novalidate>
                     <div class="form__inputs">
                         <div class="form__input-wrapper" data-input-wrapper>
-                            <input type="text" name="firstName" id="firstName" placeholder="First name" aria-label="First name">
+                            <input type="text" name="firstName" id="firstName" placeholder="First name" aria-label="First name" aria-invalid="false" aria-describedby="fname-errors">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
-                            <div class="form__input-errors" data-input-errors>
+                            <div class="form__input-errors" data-input-errors id="fname-errors" aria-live="polite">
                                 <span data-input-empty class="hidden">First Name cannot be empty</span>
                             </div>
                         </div>
                         <div class="form__input-wrapper" data-input-wrapper>
-                            <input type="text" name="lastName" id="lastName" placeholder="Last name" aria-label="Last name">
+                            <input type="text" name="lastName" id="lastName" placeholder="Last name" aria-label="Last name" aria-invalid="false" aria-describedby="lname-errors">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
-                            <div class="form__input-errors" data-input-errors>
+                            <div class="form__input-errors" data-input-errors id="lname-errors" aria-live="polite">
                                 <span data-input-empty class="hidden">Last Name cannot be empty</span>
                             </div>
                         </div>
                         <div class="form__input-wrapper" data-input-wrapper>
-                            <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" aria-label="Email address">
+                            <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" aria-label="Email address" aria-invalid="false" aria-describedby="email-errors">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
-                            <div class="form__input-errors" data-input-errors>
+                            <div class="form__input-errors" data-input-errors id="email-errors" aria-live="polite">
                                 <span data-input-empty class="hidden">Email Address cannot be empty</span>
                                 <span data-input-invalid-email class="hidden">Looks like this is not an email</span>
                             </div>
                         </div>
                         <div class="form__input-wrapper" data-input-wrapper>
-                            <input type="password" name="password" id="password" placeholder="Password" aria-label="Password">
+                            <input type="password" name="password" id="password" placeholder="Password" aria-label="Password" aria-invalid="false" aria-describedby="password-errors">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
-                            <div class="form__input-errors" data-input-errors>
+                            <div class="form__input-errors" data-input-errors id="password-errors" aria-live="polite">
                                 <span data-input-empty class="hidden">Password cannot be empty</span>
                             </div>
                         </div>
