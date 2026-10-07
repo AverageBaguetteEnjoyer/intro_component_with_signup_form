@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro component with signup form</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -22,7 +25,7 @@
                     <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
                 </div>
                 <form class="form">
-                    <div>
+                    <div class="form__inputs">
                         <div class="form__input-wrapper" data-input-wrapper>
                             <input type="text" name="firstName" id="firstName" placeholder="First name" aria-label="First name">
                             <img class="form__error-icon" src="./images/icon-error.svg" alt="">
@@ -53,8 +56,8 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <button class="form__submit-btn">Claim your free trial</button>
+                    <div class="form__actions">
+                        <button class="form__submit-button">Claim your free trial</button>
                         <small class="form__tos">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
                     </div>
                 </form>
