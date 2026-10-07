@@ -182,6 +182,10 @@ main {
     letter-spacing: .125rem;
 }
 
+.form__submit-button:is(:hover, :focus-visible) {
+    background: var(--bg-form-submit-btn-hover);
+}
+
 .form__tos {
     display: block;
     color: var(--clr-font-fourth);
@@ -194,6 +198,10 @@ main {
     color: var(--clr-font-third);
     font-weight: 700;
     text-decoration: none;
+}
+
+.form__tos a:is(:hover, :focus-visible) {
+    color: var(--clr-font-secondary);
 }
 
 @media (max-width: 53.75rem) {
