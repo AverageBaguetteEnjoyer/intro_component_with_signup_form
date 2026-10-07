@@ -5,25 +5,30 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const validateForm = () => {
     formInputWrappers.forEach(inputWrapper => {
         const input = inputWrapper.querySelector("input");
-        
-        if (input.value === "") {
-            inputWrapper.classList.add("error");
+        const inputValue = input.value.trim();
+        let hasErrors = false;
+
+        if (inputValue === "") {
+            hasErrors = true;
             inputWrapper.querySelector("[data-input-empty]").classList.remove("hidden");
-            
         } else {
-            inputWrapper.classList.remove("error");
             inputWrapper.querySelector("[data-input-empty]").classList.add("hidden");
         }
 
-        if (input.type === "email" && input.value !== "") {
-            if (!emailRegex.test(input.value)) {
-                inputWrapper.classList.add("error");
+        if (input.type === "email") {
+            if (!emailRegex.test(inputValue) && inputValue !== "") {
+                hasErrors = true;
                 inputWrapper.querySelector("[data-input-invalid-email]").classList.remove("hidden");
             }
             else {
-                inputWrapper.classList.remove("error");
                 inputWrapper.querySelector("[data-input-invalid-email]").classList.add("hidden");
             }
+        }
+
+        if (hasErrors) {
+            inputWrapper.classList.add("error");
+        } else {
+            inputWrapper.classList.remove("error");
         }
     });
 }
