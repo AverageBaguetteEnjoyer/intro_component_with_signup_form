@@ -27,7 +27,7 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: https://www.frontendmentor.io/solutions/intro-component-with-signup-form-qFEZk6hKIM
+- Solution URL: https://www.frontendmentor.io/solutions/intro-component-with-signup-form-9Zb_igG_sm
 - Live Site URL: https://introwithsignupform-abe.netlify.app
 
 ## Author
