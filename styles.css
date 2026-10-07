@@ -1,0 +1,228 @@
+:root {
+    --bg-body: oklch(73.302% 0.1639 21.9);
+    --bg-form: oklch(100% 0.00011 271.152);
+    --bg-form-submit-btn: oklch(75.284% 0.15515 159.446);
+    --bg-form-submit-btn-hover: oklch(83.586% 0.1209 163.332);
+    --bg-banner: oklch(49.474% 0.12435 286.655);
+    --clr-font-primary: oklch(100% 0.00011 271.152);
+    --clr-font-secondary: oklch(35.948% 0.02241 292.259);
+    --clr-font-third: oklch(73.302% 0.1639 21.9);
+    --clr-font-fourth: oklch(79.12% 0.04093 290.143);
+    --clr-input-border: oklch(90.06% 0.0001 271.152);
+    --clr-input-border-focus: oklch(49.474% 0.12435 286.655);
+    --clr-input-border-error: oklch(73.302% 0.1639 21.9);
+    --font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-body) url("./images/bg-intro-desktop.png") center / cover;
+    font-family: var(--font-family);
+}
+
+input, button {
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.section {
+    width: min(calc(100% - 1.5rem), 69.5625rem);
+    display: grid;
+    grid-template-columns: auto 33.75rem;
+    gap: 3rem;
+}
+
+.section__left {
+    color: var(--clr-font-primary);
+    align-self: center;
+}
+
+.section__left header {
+    display: grid;
+    gap: 1rem;
+}
+
+.section__left h1 {
+    margin-bottom: 1.3125rem;
+    font-size: 3.125rem;
+    line-height: 1.1;
+    letter-spacing: -.0313rem;
+}
+
+.section__left p {
+    line-height: 1.65;
+}
+
+.section__right {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.banner {
+    padding: 1.0313rem 4.6875rem;
+    background: var(--bg-banner);
+    color: var(--clr-font-primary);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 .5rem 0 0 oklch(0% 0 0 / .147);
+}
+
+.banner p {
+    font-size: .9375rem;
+    line-height: 1.75;
+}
+
+.form {
+    padding: 2rem 2.5rem;
+    background: var(--bg-form);
+    border-radius: 10px;
+}
+
+.form__inputs {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form__input-wrapper {
+    position: relative;
+}
+
+.form__input-wrapper input {
+    width: 100%;
+    padding: 1rem 2rem;
+    color: var(--clr-font-secondary);
+    outline: none;
+    border: 1px solid var(--clr-input-border);
+    border-radius: 5px;
+    font-size: .9375rem;
+    line-height: 1.75;
+}
+
+.form__input-wrapper input:focus-visible {
+    border-color: var(--clr-input-border-focus);
+}
+
+.form__input-wrapper input::placeholder {
+    text-transform: capitalize;
+    color: inherit;
+    opacity: .75;
+}
+
+.form__input-wrapper.error input {
+    color: var(--clr-font-third);
+    border: 2px solid var(--clr-input-border-error);
+}
+
+.form__error-icon {
+    display: none;
+    position: absolute;
+    right: 1.875rem;
+    top: 1rem;
+}
+
+.form__input-wrapper.error .form__error-icon {
+    display: block;
+}
+
+.form__input-errors {
+    display: none;
+    text-align: right;
+}
+
+.form__input-errors span {
+    color: var(--clr-font-third);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.55;
+}
+
+.form__input-wrapper.error .form__input-errors {
+    display: block;
+}
+
+.form__actions {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: .5rem;
+}
+
+.form__submit-button {
+    padding: .9375rem;
+    width: 100%;
+    background: var(--bg-form-submit-btn);
+    color: var(--clr-font-primary);
+    font-size: .9375rem;
+    text-transform: uppercase;
+    line-height: 1.75;
+    font-weight: 600;
+    box-shadow: inset 0 -.25rem 0 0 oklch(0% 0 0 / .091);
+    border-radius: .3125rem;
+    letter-spacing: .125rem;
+}
+
+.form__tos {
+    display: block;
+    color: var(--clr-font-fourth);
+    font-size: .6875rem;
+    text-align: center;
+    line-height: 1.9;
+}
+
+.form__tos a {
+    color: var(--clr-font-third);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 53.75rem) {
+    body {
+        padding: 5.5rem 0;
+    }
+
+    .section {
+        width: min(calc(100% - 3rem), 33.75rem);
+        grid-template-columns: 100%;
+        gap: 4rem;
+    }
+
+    .section__left {
+        text-align: center;
+    }
+}
+
+@media (max-width: 25rem) {
+    .section__left h1 {
+        font-size: 1.75rem;
+        line-height: 1.1;
+    }
+
+    .form {
+        padding: 1.5rem;
+    }
+
+    .form__inputs {
+        gap: 1rem;
+    }
+
+    .form__actions {
+        margin-top: 1rem;
+    }
+}
